@@ -39,7 +39,7 @@ veracode_static_scan:
       - "Veracode Static Scan"
   deployment_protection: true
   # deployment_rule: [sast-pipeline-scan, sast-policy-scan, sca-scan]
-  deployment_rule: [sast-pipeline-scan, sca-scan]
+  deployment_rule: [veracode-sast-pipeline-scan, veracode_sca_scan]
 
 veracode_sca_scan:
   push:
@@ -70,7 +70,7 @@ veracode_sca_scan:
 
 veracode_iac_secrets_scan:
   push:
-    trigger: true
+    trigger: false
     # Please only specify either branches_to_run or branches_to_exclude
     # Entering both will only execute branches_to_run
     # Leaving them both blank means this will never run
