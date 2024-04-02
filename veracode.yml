@@ -37,6 +37,8 @@ veracode_static_scan:
     trigger: false
     commands:
       - "Veracode Static Scan"
+  deployment_protection: true
+  deployment_rule: [sast-pipeline-scan, sast-policy-scan, sca-scan]
 
 veracode_sca_scan:
   push:
